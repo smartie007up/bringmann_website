@@ -1,0 +1,216 @@
+$blue-color: #53c0da;
+$orange-color: #f39819;
+$grey-color: #a1a0a0;
+$light-grey-color: #d3d3d3;
+$white-color: #fff;
+$font: 'Lato',
+sans-serif;
+$xs: 576px;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+@import url('https://fonts.googleapis.com/css?family=Lato');
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 400px;
+    width: auto !important;
+    font-size: 1rem;
+}
+
+body {
+    font-family: $font;
+}
+
+.box {
+    height: 50vh;
+}
+
+//Box 1
+#box1 {
+    background-color: $white-color;
+}
+
+#logo {
+    width: 300px;
+}
+
+//Box 2
+#box2 {
+    background-image: linear-gradient(45deg, #2db1d2, $blue-color);
+}
+
+.wrapper {
+    padding: 45px;
+}
+
+.wrapper p {
+    width: 100%;
+    margin: auto;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: justify;
+    word-wrap: break-word;
+    color: $white-color;
+}
+
+.foto {
+    float: right;
+    width: 150px;
+    shape-outside: url(images/PB.jpg);
+    shape-margin: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    border: 2px solid white;
+}
+
+//Box 3
+#box3 {
+    background-image: linear-gradient(-135deg, $orange-color, #da840b);
+}
+
+.adres-table {
+    padding-top: 15px;
+}
+
+.adres thead th {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.adres tbody th {
+    text-align: right;
+    padding: 0px 0px 10px 15px;
+}
+
+.adres tbody td {
+    text-align: left;
+    padding: 0px 0px 10px 15px;
+}
+
+.adres-box {
+    padding: 25px 0px;
+}
+
+.adres tbody td a {
+    color: black;
+    text-decoration: none;
+}
+
+.adres tbody td a:hover {
+    color: $white-color;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+//Box 4
+#box4 {
+    background-color: $white-color;
+}
+
+//Change the contact-button
+.btn-outline-success {
+    color: $grey-color !important;
+    border-color: $grey-color !important;
+}
+
+.btn-outline-success:hover {
+    background-color: $orange-color !important;
+    color: $white-color !important;
+}
+
+.btn-outline-success:focus {
+    box-shadow: 0px 0px 5px 3px $orange-color !important;
+}
+
+//The footer
+#footer {
+    width: 100%;
+    background-color: $grey-color;
+}
+
+#footer p {
+    font-size: 10pt;
+    text-align: center;
+    margin: auto;
+    padding: 10px 0;
+}
+
+//Style the modal
+.modal-body {
+    padding: 20px 25px !important;
+}
+
+.modal-title h3 {
+    text-align: center;
+    color: $orange-color;
+}
+
+.modal-title p {
+    text-align: center;
+    color: $grey-color;
+}
+
+.send-button {
+    color: $grey-color !important;
+    border-color: $grey-color !important;
+}
+
+.send-button:hover {
+    color: $white-color !important;
+    background-color: $blue-color !important;
+}
+
+.modal-text {
+    color: $grey-color !important;
+}
+
+.modal-text::placeholder {
+    color: $light-grey-color !important;
+}
+
+// Make responsive
+@media screen and (max-width: $xs) {
+    .wrapper p {
+        font-size: 2.4vw;
+    }
+    .foto {
+        width: 170px;
+    }
+}
+
+@media (min-width: $xs) and (max-width: $sm) {
+    #logo {
+        width: 310px;
+    }
+    .wrapper p {
+        font-size: 2.25vw;
+    }
+    .foto {
+        width: 200px;
+    }
+}
+
+@media (min-width: $sm) and (max-width:$md) {
+    #logo {
+        width: 250px;
+    }
+    .wrapper p {
+        font-size: 1.35vw;
+    }
+}
+
+@media (min-width: $md) and (max-width: $lg) {
+    .wrapper p {
+        font-size: 1.3vw;
+    }
+}
+
+@media screen and (min-width: $lg) {
+    .wrapper p {
+        font-size: 1.25vw;
+    }
+}
